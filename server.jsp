@@ -6,23 +6,21 @@
     String uri = request.getQueryString();
     if (uri != null) {
         if (uri.contains("Start")) {
-            out.println("This is Start Button Request");
             Process process = Runtime.getRuntime().exec("docker start " + uri.substring(0,13));
+            response.sendRedirect("server.jsp");
         }
         else if (uri.contains("Stop")) {
-            out.println("This is Stop Button");
             Process process = Runtime.getRuntime().exec("docker stop " + uri.substring(0,13));
-            out.println(uri);
+            response.sendRedirect("server.jsp");
         }
         else if (uri.contains("Delete")) {
-            out.println("This is Delete Button");
             Process proc = Runtime.getRuntime().exec("docker stop " + uri.substring(0,13));
             Process process = Runtime.getRuntime().exec("docker rm " + uri.substring(0,13));
             Connection connection = DbConnection.Connectiontodatabase();
             String query = "delete from server_info where serverID='"+uri.substring(0,13) +"'";
             Statement stmt =  connection.createStatement();
             stmt.executeUpdate(query);
-            out.println(uri);
+            response.sendRedirect("server.jsp");
         }
     }
 
