@@ -18,6 +18,8 @@
             out.println("This is Delete Button");
             Process proc = Runtime.getRuntime().exec("docker stop " + uri.substring(0,13));
             Process process = Runtime.getRuntime().exec("docker rm " + uri.substring(0,13));
+            Connection connection = DbConnection.Connectiontodatabase();
+            String query = "delete from server_info where serverID='"+uri.substring(0,13) +"'";
             out.println(uri);
         }
     }
@@ -278,17 +280,17 @@
                                                 "                                            </a>\n" +
                                                 "                                        </td>");
                                         out.println("<td>\n" +
-                                                "                                            <form action= '" + url + "' method='GET' > \n" + "<input type='submit' value='Start' name='pavan'" +
+                                                "                                            <form action= '" + url + "' method='GET' > \n" + "<input type='submit' value='Start' name='"+ set.getString(1) +"'" +
                                                 "                                               style=\"font-size: 12px; border-radius: 5px\" class=\"btn btn-outline-success\">\n" +
                                                 "                                            </form>\n" +
                                                 "                                        </td>");
                                         out.println("<td>\n" +
-                                                "                                            <form action= '" + url + "' method='GET' > \n" + "<input type='submit' value='Stop' name='pavan'"+
+                                                "                                            <form action= '" + url + "' method='GET' > \n" + "<input type='submit' value='Stop' name='"+ set.getString(1)+ "'"+
                                                 "                                               style=\"font-size: 12px; border-radius: 5px\" class=\"btn btn-outline-danger\">\n" +
                                                 "                                            </a>\n" +
                                                 "                                        </td>");
                                         out.println("<td>\n" +
-                                                "                                            <form action= '" + url + "' method='GET' > \n" + "<input type='submit' value='Delete' name='pavan'" +
+                                                "                                            <form action= '" + url + "' method='GET' > \n" + "<input type='submit' value='Delete' name='"+ set.getString(1) +"'" +
                                                 "                                               style=\"font-size: 12px; border-radius: 5px\" class=\"btn btn-outline-danger\">\n" +
                                                 "                                            </a>\n" +
                                                 "                                        </td>");

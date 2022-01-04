@@ -16,8 +16,8 @@
         {
           counter = 8000;
         }
-
-        Process process = Runtime.getRuntime().exec(" docker run -dit -p "+ counter++ +":4200 -e SIAB_PASSWORD="+ spassword +" -e SIAB_USER="+ username +" -e SIAB_SUDO=true sspreitzer/shellinabox:latest");
+        ++counter;
+        Process process = Runtime.getRuntime().exec(" docker run -dit -p "+ counter +":4200 -e SIAB_PASSWORD="+ spassword +" -e SIAB_USER="+ username +" -e SIAB_SUDO=true sspreitzer/shellinabox:latest");
         application.setAttribute("counter", counter);
         BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
         String line = reader.readLine();
