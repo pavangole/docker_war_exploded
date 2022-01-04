@@ -20,6 +20,8 @@
             Process process = Runtime.getRuntime().exec("docker rm " + uri.substring(0,13));
             Connection connection = DbConnection.Connectiontodatabase();
             String query = "delete from server_info where serverID='"+uri.substring(0,13) +"'";
+            Statement stmt =  connection.createStatement();
+            stmt.executeUpdate(query);
             out.println(uri);
         }
     }
