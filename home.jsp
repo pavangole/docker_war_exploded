@@ -11,16 +11,27 @@
         String spassword = request.getParameter("password");
         String username = request.getParameter("username");
         String name = request.getParameter("name");
-        Process process = Runtime.getRuntime().exec(" docker run -dit -p 8001:4200 -e SIAB_PASSWORD="+ spassword +" -e SIAB_USER="+ username +" -e SIAB_SUDO=true sspreitzer/shellinabox:latest");
+        Integer counter = (Integer)application.getAttribute("counter");
+        if (counter ==null || counter == 0)
+        {
+          counter = 8000;
+        }
+
+        Process process = Runtime.getRuntime().exec(" docker run -dit -p "+ counter++ +":4200 -e SIAB_PASSWORD="+ spassword +" -e SIAB_USER="+ username +" -e SIAB_SUDO=true sspreitzer/shellinabox:latest");
+        application.setAttribute("counter", counter);
         BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
         String line = reader.readLine();
-//        line = line.substring(0,12);
-//        String sql="INSERT INTO `server_info` VALUES ('" + line+ "', '" + name + "','" + username+ "','" + spassword+ "','" + email + "')";
-//        Connection connect = DbConnection.Connectiontodatabase();
-//        Statement stmt=connect.createStatement();
-//        stmt.executeUpdate(sql);
-//        response.sendRedirect("server.jsp");
+        //String line = "test" + counter ;
+        line = line.substring(0,13);
+        String sql="INSERT INTO `server_info` VALUES ('" + line+ "', '" + name + "','" + username+ "','" + spassword+ "','" + email + "','" + counter + "')";
+        Connection connect = DbConnection.Connectiontodatabase();
+        Statement stmt=connect.createStatement();
+        stmt.executeUpdate(sql);
+        response.sendRedirect("server.jsp");
+
+
   }
+
 %>
 <!doctype html>
 <html lang="en">
@@ -215,7 +226,7 @@
     </main>
     <div id="black">
         <div class="container mt-10 card">
-            <form action="server.jsp" method="POST">
+            <form action="home.jsp" method="POST">
                 <h3 class=" text-center   ">Launch Your Server</h3>
 
                     <div class="god ">

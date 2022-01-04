@@ -3,7 +3,25 @@
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.ResultSet" %>
 <%
-    out.println("Hello");
+    String uri = request.getQueryString();
+    if (uri != null) {
+        if (uri.contains("Start")) {
+            out.println("This is Start Button Request");
+            Process process = Runtime.getRuntime().exec("docker start " + uri.substring(0,13));
+        }
+        else if (uri.contains("Stop")) {
+            out.println("This is Stop Button");
+            Process process = Runtime.getRuntime().exec("docker stop " + uri.substring(0,13));
+            out.println(uri);
+        }
+        else if (uri.contains("Delete")) {
+            out.println("This is Delete Button");
+            Process proc = Runtime.getRuntime().exec("docker stop " + uri.substring(0,13));
+            Process process = Runtime.getRuntime().exec("docker rm " + uri.substring(0,13));
+            out.println(uri);
+        }
+    }
+
     HttpSession ses = request.getSession();
     String email = (String) ses.getAttribute("email");
     Connection connection = DbConnection.Connectiontodatabase();
@@ -254,27 +272,24 @@
                                         out.println("<td>" + set.getString(3) + " ");
                                         out.println("<td>" + set.getString(4) + " ");
                                         out.println("<td>\n" +
-                                                "                                            <a href= '" + url + "' \n" +
+                                                "                                            <a href=https://52.140.114.11:"+set.getInt(6) + " \n" +
                                                 "                                               style=\"font-size: 12px; border-radius: 5px\" class=\"btn btn-outline-primary\">\n" +
                                                 "                                                Connect\n" +
                                                 "                                            </a>\n" +
                                                 "                                        </td>");
                                         out.println("<td>\n" +
-                                                "                                            <a href= '" + url + "' \n" +
+                                                "                                            <form action= '" + url + "' method='GET' > \n" + "<input type='submit' value='Start' name='pavan'" +
                                                 "                                               style=\"font-size: 12px; border-radius: 5px\" class=\"btn btn-outline-success\">\n" +
-                                                "                                                Start \n" +
+                                                "                                            </form>\n" +
+                                                "                                        </td>");
+                                        out.println("<td>\n" +
+                                                "                                            <form action= '" + url + "' method='GET' > \n" + "<input type='submit' value='Stop' name='pavan'"+
+                                                "                                               style=\"font-size: 12px; border-radius: 5px\" class=\"btn btn-outline-danger\">\n" +
                                                 "                                            </a>\n" +
                                                 "                                        </td>");
                                         out.println("<td>\n" +
-                                                "                                            <a href= '" + url + "' \n" +
+                                                "                                            <form action= '" + url + "' method='GET' > \n" + "<input type='submit' value='Delete' name='pavan'" +
                                                 "                                               style=\"font-size: 12px; border-radius: 5px\" class=\"btn btn-outline-danger\">\n" +
-                                                "                                                Stop \n" +
-                                                "                                            </a>\n" +
-                                                "                                        </td>");
-                                        out.println("<td>\n" +
-                                                "                                            <a href= '" + url + "' \n" +
-                                                "                                               style=\"font-size: 12px; border-radius: 5px\" class=\"btn btn-outline-danger\">\n" +
-                                                "                                                Delete\n" +
                                                 "                                            </a>\n" +
                                                 "                                        </td>");
                                         out.println("</tr>");
