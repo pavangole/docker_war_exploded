@@ -36,7 +36,7 @@
                 ses.setAttribute("email",email);
                 ses.setAttribute("password",password);
 
-                response.sendRedirect("welcome.jsp");
+                response.sendRedirect("home.jsp");
             } else {
 // Give Waring Wrong username or password
                 showError = true;
