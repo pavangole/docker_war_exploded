@@ -14,12 +14,12 @@
         Process process = Runtime.getRuntime().exec(" docker run -dit -p 8001:4200 -e SIAB_PASSWORD="+ spassword +" -e SIAB_USER="+ username +" -e SIAB_SUDO=true sspreitzer/shellinabox:latest");
         BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
         String line = reader.readLine();
-        line = line.substring(0,12);
-        String sql="INSERT INTO `server_info` VALUES ('" + line+ "', '" + name + "','" + username+ "','" + spassword+ "','" + email + "')";
-        Connection connect = DbConnection.Connectiontodatabase();
-        Statement stmt=connect.createStatement();
-        stmt.executeUpdate(sql);
-        response.sendRedirect("server.jsp");
+//        line = line.substring(0,12);
+//        String sql="INSERT INTO `server_info` VALUES ('" + line+ "', '" + name + "','" + username+ "','" + spassword+ "','" + email + "')";
+//        Connection connect = DbConnection.Connectiontodatabase();
+//        Statement stmt=connect.createStatement();
+//        stmt.executeUpdate(sql);
+//        response.sendRedirect("server.jsp");
   }
 %>
 <!doctype html>
