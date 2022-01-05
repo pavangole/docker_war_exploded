@@ -39,7 +39,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Sidebars · Bootstrap v5.1</title>
+    <title>Server</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
     <!-- Bootstrap CSS -->
@@ -62,10 +62,13 @@
 
     <!-- Bootstrap core CSS -->
     <link href="asset/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
+        body {
+            font-size: 1.5rem;
+            font-family: 'Merriweather', serif;
             text-anchor: middle;
             -webkit-user-select: none;
             -moz-user-select: none;
@@ -214,7 +217,7 @@
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                    id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkRUKRJvv-AznH1erobEqUZ0zrLdP8bzGFe5BSNJ5E2KQWS6Ga9-ZCIuS0wHNOIG4b758&usqp=CAU" alt="" width="32" height="32" class="rounded-circle me-2">
                     <strong></strong>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">

@@ -40,7 +40,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Sidebars · Bootstrap v5.1</title>
+    <title>Home</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
     <!-- Bootstrap CSS -->
@@ -182,7 +182,7 @@
                 <svg class="bi me-2" width="40" height="32">
                     <use xlink:href="#bootstrap"/>
                 </svg>
-                <span class="fs-4">Sidebar</span>
+                <span class="fs-4">SE MA SY</span>
             </a>
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
@@ -207,8 +207,8 @@
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                    id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                    <strong>mdo</strong>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkRUKRJvv-AznH1erobEqUZ0zrLdP8bzGFe5BSNJ5E2KQWS6Ga9-ZCIuS0wHNOIG4b758&usqp=CAU" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <strong></strong>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
 

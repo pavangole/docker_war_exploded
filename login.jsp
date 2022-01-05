@@ -18,6 +18,8 @@
 <%--}--%>
 
 <%
+    HttpSession sesss = request.getSession();
+    sesss.invalidate();
     Boolean showError = false;
     if (request.getMethod().matches("POST")) {
         String email = request.getParameter("Email");
