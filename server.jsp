@@ -30,6 +30,8 @@
     Statement stmt = connection.createStatement();
     ResultSet set = stmt.executeQuery("select  * from server_info where email= '" + email + "' ");
     String url = request.getRequestURL().toString();
+
+    String name = request.getServerName();
 %>
 <!doctype html>
 <html lang="en">
@@ -277,7 +279,7 @@
                                         out.println("<td>" + set.getString(3) + " ");
                                         out.println("<td>" + set.getString(4) + " ");
                                         out.println("<td>\n" +
-                                                "                                            <a href=https://52.140.114.11:"+set.getInt(6) + " target='_blank' \n" +
+                                                "                                            <a href=https://"+ name +":"+set.getInt(6) + " target='_blank' \n" +
                                                 "                                               style=\"font-size: 12px; border-radius: 5px\" class=\"btn btn-outline-primary\">\n" +
                                                 "                                                Connect\n" +
                                                 "                                            </a>\n" +
