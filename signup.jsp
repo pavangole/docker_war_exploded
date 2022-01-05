@@ -15,7 +15,6 @@
     boolean showalert = false;
     boolean showerror = false;
     boolean exits = false;
-    PrintWriter output = response.getWriter();
 
     //Collect data if request is post
     if (request.getMethod().matches("POST")) {

@@ -1,132 +1,127 @@
-
-
 <!doctype html>
 <html lang="en">
-
-<head>
-    <!-- Required meta tags -->
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>SEMASY</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
 
-    <title>SERVICE MANAGEMENT AND MONITORING SOFTWARE</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="asset/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="asset/carousel.css" rel="stylesheet">
+  </head>
+  <body>
+  <jsp:include page="nav.jsp"></jsp:include>
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://media.istockphoto.com/photos/shot-of-modern-data-center-with-multiple-rows-of-operational-server-picture-id1148196201?b=1&k=20&m=1148196201&s=170667a&w=0&h=2l0pPKfgbEqKgQU9NUVDhGehXIr2TlO95TpQIyvyVQo=" class="bd-placeholder-img" height="100%" width="100%">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>SE MA SY</h1>
+            <p>Lauch Os In Seconds</p>
+            <p><a class="btn btn-lg btn-primary" href="signup.jsp">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTNa7CoOGr2f4zGPYZ2rldEqmjCEqVvZ_xiQ&usqp=CAU" height="100%" width="100%">
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Be Command Line Expert</h1>
+            <p>You can anything here with higly secure cmd line</p>
+            <p><a class="btn btn-lg btn-primary" href="https://www.google.com?q=command line">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+          </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
 
-</head>
-<style>
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    .bgimg{
-        background-image:url(static/img5.jpg);
-        background-repeat:no-repeat;
-        height:80vh;
-    }
-    .bgtext {
-        padding-top: 20vh;
-        font: size 90px;
-        color:white;
-        display: flex;
-        justify-content:center;
-        align-items:center;
-        font-family: 'PT Serif', serif;
-    }
-    .text{
-        font-size: 20px;
-        padding: 10px;
-        color:white;
-        display: flex;
-        justify-content:center;
-        align-items:center;
-        font-family: 'PT Serif', serif;
-    }
+  <div class="container marketing">
 
-</style>
-
-<body>
-<jsp:include page="nav.jsp"></jsp:include>
-
-<div class="bgimg">
-    <h1 class="bgtext">Server Management And Compute System</h1>
-    <br> <br>
-
-    <p class="text">Monitor and manage your servers performance and uptime from anywhere<br>
-        and at any time. Get insight over the real-time status of Active Directory, IIS,<br>
-        SQL Server, Microsoft Exchange, VMware, Hyper-V and more.</p>
-</div>
-
-<br>
-<br>
-
-<div class="container-fluid">
+    <!-- Three columns of text below the carousel -->
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-12">
-            <img src="static/server.png" class="img-fluid">
-        </div>
+      <div class="col-lg-4">
+        <img src="https://imgk.timesnownews.com/story/SSP_0.jpg?tr=w-1200,h-900" class="bd-placeholder-img rounded-circle" width="140" height="140" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/>
 
-        <div class="col-lg-6 col-md-6 col-12">
-            <h3 class="display-4">Why is server monitoring important?</h3>
-            <p class="py-3">Servers are the backbone of your business. To minimize downtime and to ensure peak performance of your website and services, constant monitoring of your server infrastructure and your data center is vital.
-                By tracking the uptime, health, disk space and performance of your servers, you can prevent outages and identify bandwidth hogs. In addition, you are laying the foundation for delivering a great service to your customers, through a fast-loading and constantly available website</p>
-            <a href="www.google.com" target="blank" class="btn btn-success"  >Check more</a>
-        </div>
-    </div>
-</div>
-</div>
+        <h2>Fast</h2>
+        <p>In just seconds you cant get your OS</p>
+       
+      </div><!-- /.col-lg-4 -->
+     <div class="col-lg-4">
+        <img src="https://www.upsite.com/wp-content/uploads/2017/07/server-reliability-vs-inlet-temperature.png" class="bd-placeholder-img rounded-circle" width="140" height="140" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/>
 
-<section class="my-5">
-    <div class="py-5">
-        <h2 class="display-4 text-center">Defining and understanding server monitoring</h2>
-    </div>
+        <h2>Reliable</h2>
+        <p>Your Trust is our Success</p>
+       
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOkeIEfpS3MqbSVIE9EhZ1VPs5q4Ew7WYaI986pznIW0e5gPKEDOk56kpaAtk9d-FGn2w&usqp=CAU" class="bd-placeholder-img rounded-circle" width="140" height="140" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Information in real time</h5>
-                        <p class="card-text">Server monitoring lets you monitor your servers in real time with regard to availability, accessibility, capacity, and overall reliability. With server monitoring, your servers are checked at regular intervals to ensure you always know their status.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Improve stability</h5>
-                        <p class="card-text">Sysadmins monitor their servers because they wish to improve the stability and performance of their networks. If certain threshold values are exceeded, you’ll receive a warning message so you can take action at once. Our monitoring service helps you complete your everyday tasks. It provides you with a constant overview of your server resources.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Basis for analysis
-                        </h5>
-                        <p class="card-text">Sysadmins analyze the values they receive from their monitoring software to develop courses of action. When studied over the long term, these values can help optimize various aspects that are responsible for the performance of your network, such as capacity planning. The PRTG reports feature is extremely useful for such optimization.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        <h2>Secure</h2>
+        <p>You connection is highly secure by using top security encryption</p>
+       
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
 
 
-<!-- Optional JavaScript; choose one of the two! -->
+    
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2022 SEMASY, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
 
-<!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
 
-<!-- Option 2: Separate Popper and Bootstrap JS -->
-<!--
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
--->
-</body>
+    <script src="asset/min.js"></script>
 
+      
+  </body>
 </html>

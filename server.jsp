@@ -274,7 +274,7 @@
                                         out.println("<td>" + set.getString(3) + " ");
                                         out.println("<td>" + set.getString(4) + " ");
                                         out.println("<td>\n" +
-                                                "                                            <a href=https://52.140.114.11:"+set.getInt(6) + " \n" +
+                                                "                                            <a href=https://52.140.114.11:"+set.getInt(6) + " target='_blank' \n" +
                                                 "                                               style=\"font-size: 12px; border-radius: 5px\" class=\"btn btn-outline-primary\">\n" +
                                                 "                                                Connect\n" +
                                                 "                                            </a>\n" +

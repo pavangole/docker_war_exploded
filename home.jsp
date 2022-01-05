@@ -7,7 +7,6 @@
   if(request.getMethod().matches("POST")) {
         HttpSession sess = request.getSession();
         String email = (String) sess.getAttribute("email");
-        String password = (String) sess.getAttribute("password");
         String spassword = request.getParameter("password");
         String username = request.getParameter("username");
         String name = request.getParameter("name");
@@ -21,7 +20,7 @@
         application.setAttribute("counter", counter);
         BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
         String line = reader.readLine();
-        //String line = "test" + counter ;
+      //String line = "test" + counter ;
         line = line.substring(0,13);
         String sql="INSERT INTO `server_info` VALUES ('" + line+ "', '" + name + "','" + username+ "','" + spassword+ "','" + email + "','" + counter + "')";
         Connection connect = DbConnection.Connectiontodatabase();
